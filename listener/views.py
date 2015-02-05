@@ -6,4 +6,5 @@ from models import Heard
 def listen(request):
     h = Heard(payload=request.POST)
     h.save()
-    return HttpResponse(request.POST)
+    hub_token = request.GET.get('hub.challenge')
+    return HttpResponse(hub_token)
