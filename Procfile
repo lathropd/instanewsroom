@@ -1,1 +1,1 @@
-web: gunicorn instanewsroom.wsgi --log-file -
+worker:  python scripts/instagramy.py
